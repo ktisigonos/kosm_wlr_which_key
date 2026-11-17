@@ -1,0 +1,23 @@
+.{
+    .name = .kosm_wlr_which_key,
+    .version = "0.0.0",
+    .fingerprint = 0xbd9002761475b3c7, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .kosm_yaml = .{
+            .url = "git+https://git.nnstdios.com/ktisigonos/kosm_yaml?ref=master#b13014ae8a049b58cbd93cf91c0dae2ef53b3b12",
+            .hash = "kosm_yaml-0.0.0-04vrVaI1AAD1uMCoW_3eKMn34gKUatmR6MvWFqjj6Jjg",
+        },
+        .kosm = .{
+            .url = "git+https://git.nnstdios.com/ktisigonos/kosm?ref=master#deb5cf90bf39a5a56383cae87741a63e188a31c5",
+            .hash = "kosm-0.0.0-YCShstdKDADrhGiFLCoGqCNCw5TX_OTNjGr5dAG1t6vz",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "root.zig",
+        "App.zig",
+        "README.md",
+    },
+}
