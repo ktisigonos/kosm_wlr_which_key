@@ -6,6 +6,8 @@ const std = @import("std");
 pub const App = @import("App.zig");
 /// Colors from the theme.
 pub const from = App.from;
+/// The adapter the app edits config.yaml with, so a config needs only this package.
+pub const yaml_adapter = @import("kosm_yaml").adapter;
 
 test {
     std.testing.refAllDecls(@This());

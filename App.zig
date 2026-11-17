@@ -50,7 +50,7 @@ pub fn apply(self: App, output: *kosm.Output) !void {
 }
 
 const testing = std.testing;
-const kosm_yaml = @import("kosm_yaml");
+const yaml_adapter = @import("root.zig").yaml_adapter;
 
 const shipped =
     \\font: JetBrainsMono Nerd Font 12
@@ -87,7 +87,7 @@ test "only the set options' values change, and a missing key fails naming the fi
     var output: kosm.Output = .{
         .allocator = arena.allocator(),
         .home = home_buffer[0..try tmp.dir.realPath(testing.io, &home_buffer)],
-        .adapters = &.{kosm_yaml.adapter},
+        .adapters = &.{yaml_adapter},
         .plan = &plan,
         .diagnostics = &diagnostics,
         .warnings = &warnings,
