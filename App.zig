@@ -36,6 +36,12 @@ pub fn from(theme: kosm.Theme) App {
     };
 }
 
+/// What `kosm doctor` checks: wlr-which-key installed, as the `wlr-which-key` command.
+pub fn checkup(self: App) kosm.Checkup {
+    _ = self;
+    return .{ .program = .{ .command = "wlr-which-key" } };
+}
+
 /// Sets every set option in `file`. With none set, the file is not read.
 pub fn apply(self: App, output: *kosm.Output) !void {
     var config: ?kosm.Output.Selection = null;

@@ -11,6 +11,8 @@ naming it. wlr-which-key reads its config each time it opens, so no reload is ne
 the text from the foreground role and the frame from the accent. The font and the frame's
 sizes are left alone.
 
+`kosm doctor` checks that wlr-which-key is installed, as the `wlr-which-key` command.
+
 ## Fields
 
 | Field | Default |
